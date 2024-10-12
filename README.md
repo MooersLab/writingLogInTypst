@@ -1,7 +1,7 @@
 ![Version](https://img.shields.io/static/v1?label=manuscriptInTypst&message=0.1&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-# Writing log template for manuscript in typst
+# Writing log template in typst for journal article
 
 ## Purpose
 
@@ -35,6 +35,54 @@ Prepare PDF for initial submission of a manuscript.
 - in-dexter v0.6.0
 - cheq v0.2.0
 
+
+## Optional bash functions to ease copying to new project
+
+Store in `.bashrc` or `.zshrc`.
+Edit file paths to suit.
+
+```bash
+function typlog {
+echo "Copy template writing log in typst with project number in title."
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  echo "Usage1: typlog projectID"
+  return 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  echo "Usage1: typlog projectID"
+  return 2
+fi
+projectID="$1"
+echo "Write writing log to log$1.typ file."
+cp  ~/6112MooersLabGitHubLabRepos/writingLogInTypst/logTemplate.org log$1.typ
+cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/wordcount.csv .
+cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/template.bib $1.bib
+}
+
+
+
+function logtyp {
+echo "Copy template writing log in typst with project number in title."
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  echo "Usage1: logtyp projectID"
+  return 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  echo "Usage1: logtyp projectID"
+  return 2
+fi
+projectID="$1"
+echo "Write writing log to log$1.typ file."
+cp  ~/6112MooersLabGitHubLabRepos/writingLogInTypst/logTemplate.org log$1.typ
+cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/wordcount.csv .
+cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/template.bib $1.bib
+}
+
+
+
+```
 
 
 ## Update history
