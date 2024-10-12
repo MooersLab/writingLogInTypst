@@ -26,6 +26,7 @@ Prepare PDF for initial submission of a manuscript.
 - typst source file template
 - biblatex file
 - sample PDF
+- wordcount.csv
 
 
 ## Requirements
