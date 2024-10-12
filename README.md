@@ -31,8 +31,8 @@ Prepare PDF for initial submission of a manuscript.
 ## Requirements
 
 - typst version 0.11.0 or more recent
-- in-dexter package
-- cheq package
+- in-dexter v0.6.0
+- cheq v0.2.0
 
 
 
