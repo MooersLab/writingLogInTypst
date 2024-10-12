@@ -5,7 +5,7 @@
 
 ## Purpose
 
-Prepare PDF for initial submission of a manuscript.
+Support the preparation of a scientific journal article for submission.
 
 ## Features
 
