@@ -11,14 +11,15 @@ Prepare PDF for initial submission of a manuscript.
 
 - table of contents
 - index
-- bibliogrpahy
+- bibliography
 - single- and double-spacing
 - running title in header
 - 1/N page numbering
-- biblatex 
+- BibLaTeX 
 
 ## Sample of first page
 
+<img width="1586" alt="Screenshot 2024-10-11 at 10 41 04 PM" src="https://github.com/user-attachments/assets/beb81060-0ae0-40ad-b51a-e35137902767">
 
 
 ## Contents
