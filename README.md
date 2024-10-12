@@ -10,6 +10,13 @@ Prepare PDF for initial submission of a manuscript.
 ## Features
 
 - table of contents
+- Project initiation metadata
+- Project management metadata
+- Daily log
+- To dos
+- Future off-shoots
+- Protocols
+- List of typst links
 - index
 - bibliography
 - single- and double-spacing
