@@ -693,6 +693,17 @@ A variant for use with biblatex is coming soon.
 + Often the error is in the bibitem entry above the one indicated in the error messages.
 + All interior braces must by followed by a comma, including the last one.
 + When stumped, replace the entry with a fresh one from Google Scholar.
+ 
+== Guidelines for BibTeX to BibLaTeX library conversion
+
+- Start R-Studio
+- library(devtools)
+- install_github("GeoBosh/rbibutils")
+- library(rbibutils)
+- bibConvert("~/Documents/global.bib", "~/Documents/globalBiblatex.bib", "bibtex", "biblatex")
+
+
+
 
 
 == Graphical Abstract Protocol
@@ -795,7 +806,7 @@ pub fn main() {
 
 = Typst links to support customization
 
-
+- #link("https://johnmacfarlane.net/texmath.html")[texmath web app: convert from Latex to typst]
 - #link("https://github.com/sitandr/typst-examples-book")[Typst examples book]
 - #link("https://typst.app")[typst.app]
 - #link("https://typst.app/universe")[typst.app/universe]
