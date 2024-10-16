@@ -3,9 +3,16 @@
 
 # Writing log template in typst for journal article
 
+
 ## Purpose
 
-Support the preparation of a scientific journal article for submission.
+Support the preparation of a scientific journal article for submission by providing space for thinking and planning the manuscript rather than doing this in the margins of the manuscript document.
+
+## What is typst?
+
+A type-setting program built on top of the programming language Rust. 
+It compiles small documents almost instantly, so it can be used interactively. 
+The [typst.app](https://typst.app) is analogous to Overleaf in the LaTeX world.
 
 ## Features
 
@@ -43,10 +50,11 @@ Support the preparation of a scientific journal article for submission.
 - cheq v0.2.0
 
 
-## Optional bash functions to ease copying to new project
+## Optional bash functions to ease copying the template to a new project
 
 Store in `.bashrc` or `.zshrc`.
 Edit file paths to suit.
+Two functions are provided, so you do not have to remember the order of the component names in the function name.
 
 ```bash
 function typlog {
@@ -66,8 +74,6 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogInTypst/logTemplate.org log$1.typ
 cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/wordcount.csv .
 cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/template.bib $1.bib
 }
-
-
 
 function logtyp {
 echo "Copy template writing log in typst with project number in title."
