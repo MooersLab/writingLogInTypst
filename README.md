@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=manuscriptInTypst&message=0.1&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=manuscriptInTypst&message=0.2&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # Writing log template in typst for journal article
@@ -46,9 +46,48 @@ The [typst.app](https://typst.app) is analogous to Overleaf in the LaTeX world.
 ## Requirements
 
 - typst version 0.11.0 or more recent
-- in-dexter v0.6.0
-- cheq v0.2.0
+- in-dexter v0.6.0 to generate an index.
+- cheq v0.2.0 
 
+## Bash or zsh function to compile to PDF and open in Preview.app on Mac (optional)
+
+Typst compiles the *.typfile so quickly that you might as well pop open the PDF: `typc <filename prefix>`.
+
+```bash
+function typc {
+echo "Compile typst file to PDF and display PDF file."
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  echo "Usage1: typc <filename prefix>"
+  return 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  echo "Usage1: typc  <typst filename prefix>"
+  return 2
+fi
+typst compile $1.typ && pre $1.pdf
+}
+```
+
+## Bash or zsh function to preview typst file with tinymist (optional)
+
+Yes, I hate typing: `tmp <typst filename prefix>"
+
+```bash
+function tmp {
+echo "Preview typst file in browser via tinymist."
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  echo "Usage1: tmp <filename prefix>"
+  return 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  echo "Usage1: typc  <filename prefix>"
+  return 2
+fi
+tinymist preview $1.typ
+}
+```
 
 ## Optional bash functions to ease copying the template to a new project
 
@@ -92,9 +131,6 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogInTypst/logTemplate.org log$1.typ
 cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/wordcount.csv .
 cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/template.bib $1.bib
 }
-
-
-
 ```
 
 
@@ -103,7 +139,7 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInTypst/template.bib $1.bib
 |Version       |Changes                                                                                               |Date                 |
 |:-------------|:-----------------------------------------------------------------------------------------------------|:--------------------|
 | Version 0.1  | Initiate project. Added badges, funding, and update table.                                           | 2024 October 11     |
-
+| Version 0.2  | Added two bash convience functions to README.md.                                                     | 2024 October 19     |
 
 ## Sources of funding
 
