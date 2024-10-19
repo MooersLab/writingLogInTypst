@@ -14,14 +14,15 @@
 // Set the title use for reuse in the running title and the main title page.
 #let title = [Wrting log template in typst]
 
+// Set the title and running title 
+#let title = [Wrting log template in typst]
+#let running = [Writing log #datetime.today().display()]
 #set page(
-  header: align(
-    right + horizon,
-    title
-  ),
+     header:[ Student, ..., and Mooers #h(1fr) #running],
   numbering: "1 / 1",
   number-align: right,
 )
+
 
 #align(center, text(17pt)[
   *#title*
