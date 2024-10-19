@@ -46,8 +46,23 @@ The [typst.app](https://typst.app) is analogous to Overleaf in the LaTeX world.
 ## Requirements
 
 - typst version 0.11.0 or more recent
-- in-dexter v0.6.0 to generate an index.
-- cheq v0.2.0 
+- in-dexter v0.6.0 to generate an index (optional).
+- cheq v0.2.0 to generate checklists (optional)
+
+## How to install packages locally
+
+Git clone the package in {data-dir}/typst/packages/{namespace}/{name}/{version} to make it available on your system. 
+
+Here, {data-dir} is one of the following:
+
+*Linux:*   $XDG_DATA_HOME or ~/.local/share on Linux
+*MacOS:*    ~/Library/Application Support on macOS
+*Windows:*  %APPDATA% on Windows
+
+Packages in the data directory have precedence over ones in the cache directory. 
+A good namespace for system-local packages is local:
+Import the package in your typst file with `#import "@local/mypkg:1.0.0": *`.
+
 
 ## Bash or zsh function to compile to PDF and open in Preview.app on Mac (optional)
 
