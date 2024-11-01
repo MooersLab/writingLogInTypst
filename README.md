@@ -1,8 +1,9 @@
 ![Version](https://img.shields.io/static/v1?label=manuscriptInTypst&message=0.2&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-# Writing log template in typst for journal article
+# Writing log template in Typst for journal article
 
+A nice introduction to Typst in October 2024 by Dr. Chase Brown of the University of Central Florida is found [here](https://mediasite.ouhsc.edu/Mediasite/Channel/python/browse/null/most-recent/null/0/null).
 
 ## Purpose
 
